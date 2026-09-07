@@ -1,49 +1,66 @@
 # MediTrack — Medical Shop Manager
 
-A full-stack web application for tracking medicine inventory and sales, built with Python (Flask) and HTML/CSS/JS.
+MediTrack is a Flask-based inventory and sales dashboard for managing medicines, stock levels, revenue, and expiry alerts in a small medical shop.
 
 ## Features
-- **Dashboard** — KPIs: total medicines, revenue, stock value, low-stock count
-- **Medicines** — Add, edit, delete medicines with stock, price, expiry, supplier
-- **Stock Alerts** — Highlights low-stock and expiring medicines
-- **Sales** — Record sales (auto-deducts stock), view history with filters
-- **Persistent Storage** — All data saved to `data.json`
+- Dashboard with KPIs for total medicines, inventory value, revenue, and sales count
+- Medicine management: add, edit, and delete medicines
+- Low-stock and expiry alerts
+- Sales tracking with automatic stock deduction
+- Persistent storage in a local JSON file
+- Heroku-ready deployment setup via Procfile
 
-## Setup & Run
+## Requirements
+- Python 3.10+
+- Flask
 
-### 1. Install dependencies
+## Setup and Run
+
+1. Open a terminal in the project folder.
+2. Install dependencies:
+
 ```bash
-pip install flask
+pip install -r requirements.txt
 ```
 
-### 2. Run the app
+3. Start the app:
+
 ```bash
-cd medshop
 python app.py
 ```
 
-### 3. Open in browser
-```
+4. Open the app in your browser:
+
+```text
 http://localhost:5000
 ```
 
 ## Project Structure
-```
+
+```text
 medshop/
-├── app.py              # Flask backend (REST API)
-├── data.json           # Auto-generated data store
-├── templates/
-│   └── index.html      # Frontend (HTML/CSS/JS)
-└── README.md
+├── app.py            # Flask backend and API
+├── index.html        # Front-end UI for the dashboard and forms
+├── data.json         # Auto-generated application data
+├── requirements.txt  # Python dependencies
+├── Procfile          # Heroku deployment entry
+├── README.md         # Project documentation
+└── .gitignore        # Git ignore rules
 ```
 
 ## API Endpoints
-| Method | Endpoint               | Description           |
-|--------|------------------------|-----------------------|
-| GET    | /api/dashboard         | Dashboard stats       |
-| GET    | /api/medicines         | List all medicines    |
-| POST   | /api/medicines         | Add new medicine      |
-| PUT    | /api/medicines/:id     | Update medicine       |
-| DELETE | /api/medicines/:id     | Delete medicine       |
-| GET    | /api/sales             | List all sales        |
-| POST   | /api/sales             | Record a sale         |
+
+| Method | Endpoint | Description |
+| --- | --- | --- |
+| GET | /api/dashboard | Returns summary dashboard metrics |
+| GET | /api/medicines | Lists all medicines |
+| POST | /api/medicines | Adds a new medicine |
+| PUT | /api/medicines/:id | Updates a medicine |
+| DELETE | /api/medicines/:id | Deletes a medicine |
+| GET | /api/sales | Lists recent sales |
+| POST | /api/sales | Records a sale |
+
+## Notes
+- The app uses the root-level [index.html](index.html) as the frontend template, not a templates folder.
+- The server is configured to run on port 5000 by default, with Heroku support via the Procfile.
+- If the data file does not exist, the app creates a sample medicine inventory automatically.
