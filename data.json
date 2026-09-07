@@ -1,0 +1,118 @@
+{
+  "medicines": [
+    {
+      "id": 1,
+      "name": "Paracetamol 500mg",
+      "category": "Analgesic",
+      "stock": 240,
+      "price": 12.5,
+      "expiry": "2026-08-01",
+      "supplier": "Sun Pharma",
+      "min_stock": 50
+    },
+    {
+      "id": 2,
+      "name": "Amoxicillin 250mg",
+      "category": "Antibiotic",
+      "stock": 85,
+      "price": 45.0,
+      "expiry": "2026-03-15",
+      "supplier": "Cipla",
+      "min_stock": 30
+    },
+    {
+      "id": 3,
+      "name": "Metformin 500mg",
+      "category": "Antidiabetic",
+      "stock": 18,
+      "price": 22.0,
+      "expiry": "2027-01-10",
+      "supplier": "Dr. Reddy's",
+      "min_stock": 40
+    },
+    {
+      "id": 4,
+      "name": "Atorvastatin 10mg",
+      "category": "Cardiovascular",
+      "stock": 130,
+      "price": 35.0,
+      "expiry": "2026-11-20",
+      "supplier": "Lupin",
+      "min_stock": 25
+    },
+    {
+      "id": 5,
+      "name": "Omeprazole 20mg",
+      "category": "Antacid",
+      "stock": 9,
+      "price": 18.75,
+      "expiry": "2025-12-31",
+      "supplier": "Zydus",
+      "min_stock": 30
+    },
+    {
+      "id": 6,
+      "name": "Cetirizine 10mg",
+      "category": "Antihistamine",
+      "stock": 310,
+      "price": 8.0,
+      "expiry": "2027-05-15",
+      "supplier": "Mankind",
+      "min_stock": 60
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "medicine_id": 1,
+      "medicine_name": "Paracetamol 500mg",
+      "quantity": 10,
+      "unit_price": 12.5,
+      "total": 125.0,
+      "date": "2025-06-01",
+      "customer": "Ravi Kumar"
+    },
+    {
+      "id": 2,
+      "medicine_id": 4,
+      "medicine_name": "Atorvastatin 10mg",
+      "quantity": 5,
+      "unit_price": 35.0,
+      "total": 175.0,
+      "date": "2025-06-02",
+      "customer": "Priya Sharma"
+    },
+    {
+      "id": 3,
+      "medicine_id": 6,
+      "medicine_name": "Cetirizine 10mg",
+      "quantity": 20,
+      "unit_price": 8.0,
+      "total": 160.0,
+      "date": "2025-06-02",
+      "customer": "Walk-in"
+    },
+    {
+      "id": 4,
+      "medicine_id": 2,
+      "medicine_name": "Amoxicillin 250mg",
+      "quantity": 15,
+      "unit_price": 45.0,
+      "total": 675.0,
+      "date": "2025-06-03",
+      "customer": "Anjali Reddy"
+    },
+    {
+      "id": 5,
+      "medicine_id": 3,
+      "medicine_name": "Metformin 500mg",
+      "quantity": 30,
+      "unit_price": 22.0,
+      "total": 660.0,
+      "date": "2025-06-03",
+      "customer": "Suresh Rao"
+    }
+  ],
+  "next_med_id": 7,
+  "next_sale_id": 6
+}
